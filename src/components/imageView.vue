@@ -35,7 +35,6 @@ export default defineComponent({
   max-width: 80rem;
   margin: 5rem auto;
   padding: 0 5rem;
-  text-align: center;
 }
 
 .gallery-panel img {
@@ -43,6 +42,7 @@ export default defineComponent({
   height: 90%;
   object-fit: cover;
   border-radius: 0.75rem;
+  text-align: center;
 }
 .author {
   text-align: center;
