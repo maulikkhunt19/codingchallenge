@@ -43,7 +43,7 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
-  max-width: 80rem;
+  max-width: 100rem;
   margin: 5rem auto;
 }
 
@@ -52,7 +52,6 @@ export default defineComponent({
   height: 35rem;
   object-fit: cover;
   border-radius: 0.75rem;
-  text-align: center;
 }
 .author {
   text-align: center;
