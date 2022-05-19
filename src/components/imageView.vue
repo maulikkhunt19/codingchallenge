@@ -33,8 +33,9 @@ export default defineComponent({
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
   max-width: 80rem;
-  margin: auto auto;
+  margin: 5rem auto;
   padding: 0 5rem;
+  text-align: center;
 }
 
 .gallery-panel img {
