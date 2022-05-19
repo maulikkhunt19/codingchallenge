@@ -42,8 +42,8 @@ export default defineComponent({
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 1rem;
-  max-width: 100rem;
+  grid-gap: 2rem;
+  max-width: 80rem;
   margin: 5rem auto;
 }
 
