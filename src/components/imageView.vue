@@ -1,13 +1,15 @@
 <template>
   <div class="gallery">
     <div class="gallery-panel" v-for="item in imageData" :key="item.id">
-      <img
-        v-bind:src="`https://picsum.photos/id/${item.id}/500/600.jpg`"
-        alt=""
-        class="image"
-      />
-      <div class="image-caption">
-        <p class="author">{{ item.author }}</p>
+      <div class="border">
+        <img
+          v-bind:src="`https://picsum.photos/id/${item.id}/500/600.jpg`"
+          alt=""
+          class="image"
+        />
+        <div class="image-caption">
+          <p class="author border">{{ item.author }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -23,16 +25,15 @@ export default defineComponent({
     return { imageData: undefined };
   },
   mounted() {
-    axios.get("https://picsum.photos/v2/list?page=2&limit=12").then((resp) => {
-      this.imageData = resp.data;
-      console.log(resp.data);
-    });
-  },
-  computed: {
-    imageWithId(id: string) {
-      console.log("https://picsum.photos/id/" + id + "/200/300.jpg");
-      return "hello";
-    },
+    axios
+      .get(
+        "https://picsum.photos/v2/list?page=" +
+          (Math.floor(Math.random() * 50) + 1) +
+          "&limit=12"
+      )
+      .then((resp) => {
+        this.imageData = resp.data;
+      });
   },
 });
 </script>
@@ -43,9 +44,7 @@ export default defineComponent({
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
   max-width: 80rem;
-
   margin: 5rem auto;
-  /* padding: 0 5rem; */
 }
 
 .gallery-panel img {
